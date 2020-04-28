@@ -247,6 +247,5 @@ async def on_message(message):
     # NEED await bot.process_commands(message) IN ORDER TO USE BOT COMMANDS AT THE END OF ON_MESSAGE
 
 
-bot.run('NjM1Mjg5MjI3MjY1MDQ4NjA2.XbNpng.0DXPHy8ea1bSI1oHKubsMlI15_s')
+bot.run('token goes here')
 
-# NjM1Mjg5MjI3MjY1MDQ4NjA2.Xa-xnA.pNt2MiAZ2k41PeuMGF0DI6aoAJY
