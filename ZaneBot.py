@@ -137,6 +137,13 @@ async def check_lvl(users, user, message):
 
 #########################################
 
+@bot.command()
+async def quote(ctx):
+    print (ctx.message.system_content)
+    print (ctx.author)
+    quoteMessage = ctx.message.system_content
+    print (quoteMessage[7:])
+    await ctx.send('Quote added')
 
 @bot.command()
 async def checklvl(message):
@@ -237,6 +244,7 @@ async def on_message(message):
     if message.content.startswith('$greet'):
         await message.channel.send('Say hello!')
 
+
         def check(m):
             return m.content == 'hello' and m.channel == message.channel
 
@@ -247,5 +255,11 @@ async def on_message(message):
     # NEED await bot.process_commands(message) IN ORDER TO USE BOT COMMANDS AT THE END OF ON_MESSAGE
 
 
-bot.run('token goes here')
+
+@bot.command
+async def stop(ctx):
+    await ctx.bot.logout()
+
+bot.run('NjM1Mjg5MjI3MjY1MDQ4NjA2.XqeGTg.AEaGHXE9yoKfpwFYPFyQ731Z_DM')
+
 
